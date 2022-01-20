@@ -35,7 +35,7 @@ const parseTable = async (table: Deno.Reader) => {
         continue;
       }
       const feature = row[0];
-      if (feature === "Sum") {
+      if (feature === "**Sum**") {
         continue;
       }
       const support = row.slice(1).map((x) => x === "✅");
@@ -68,7 +68,7 @@ const stringifyTable = (table: Table, sum = false) => {
       Object.values(v).filter((x) => x).length
     );
 
-    result += "|Sum|" + summed.join("|") + "|\n";
+    result += "|**Sum**|" + summed.join("|") + "|\n";
   }
   return result;
 };
