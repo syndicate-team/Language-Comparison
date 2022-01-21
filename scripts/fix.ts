@@ -18,6 +18,14 @@ const sortTable = (obj: Table): Table =>
     ).map((k) => [k, sortKeys(obj[k])]),
   );
 
+const hardSortTable = (keyOrder: string[], obj: Table): Table => {
+  const result: Table = {};
+  for (const k of new Set([...keyOrder, ...Object.keys(obj)])) {
+    result[k] = obj[k];
+  }
+  return result;
+};
+
 const parseTable = async (table: Deno.Reader) => {
   const keys: string[] = [];
 
@@ -79,7 +87,20 @@ const file = await Deno.open(input);
 const result = await parseTable(file);
 file.close();
 
-const sorted = sortTable(result);
+const sorted = hardSortTable([
+  "C",
+  "C++",
+  "Zig",
+  "Rust",
+  "Go",
+  "Haskell",
+  "Java",
+  "LuaJIT",
+  "JS",
+  "TS",
+  "Python",
+  "PHP",
+], sortTable(result));
 
 const out = `# Languages
 

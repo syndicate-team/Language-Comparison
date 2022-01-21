@@ -2,20 +2,20 @@
 
 <!-- ✅❌❓⚠️ -->
 
-|                   | C | Go | JS | TS | C++ | PHP | Zig | Java | Rust | Python | Haskell |
-| ----------------- | - | -- | -- | -- | --- | --- | --- | ---- | ---- | ------ | ------- |
-| LSP               | ✅ | ✅  | ✅  | ✅  | ✅   | ❌   | ✅   | ✅    | ✅    | ✅      | ✅       |
-| No GC             | ✅ | ❌  | ❌  | ❌  | ✅   | ❌   | ✅   | ❌    | ✅    | ❌      | ❌       |
-| UB-safe           | ❌ | ✅  | ✅  | ✅  | ❌   | ✅   | ❌   | ✅    | ✅    | ✅      | ✅       |
-| Memory safe       | ❌ | ❌  | ✅  | ✅  | ❌   | ✅   | ❌   | ✅    | ❌    | ✅      | ✅       |
-| Static types      | ✅ | ✅  | ❌  | ✅  | ✅   | ❌   | ✅   | ✅    | ✅    | ❌      | ✅       |
-| Crossplatform     | ❌ | ✅  | ✅  | ✅  | ❌   | ✅   | ✅   | ✅    | ✅    | ✅      | ❌       |
-| Borrow checker    | ❌ | ❌  | ❌  | ❌  | ❌   | ❌   | ❌   | ❌    | ✅    | ❌      | ❌       |
-| Rich ecosystem    | ✅ | ✅  | ✅  | ✅  | ✅   | ✅   | ❌   | ✅    | ✅    | ✅      | ✅       |
-| Small binaries    | ✅ | ✅  | ❌  | ❌  | ✅   | ❌   | ✅   | ❌    | ✅    | ❌      | ❌       |
-| Reasonably fast   | ✅ | ✅  | ❌  | ❌  | ✅   | ❌   | ✅   | ✅    | ✅    | ❌      | ✅       |
-| Type level code   | ❌ | ❌  | ❌  | ✅  | ✅   | ❌   | ✅   | ❌    | ✅    | ❌      | ✅       |
-| Fast compilation  | ✅ | ❌  | ✅  | ❌  | ❌   | ✅   | ✅   | ❌    | ❌    | ✅      | ❌       |
-| <250M dev install | ✅ | ✅  | ✅  | ✅  | ❌   | ✅   | ✅   | ❌    | ❌    | ✅      | ❌       |
-| Full type erasure | ✅ | ❌  | ❌  | ❌  | ✅   | ❌   | ✅   | ❌    | ✅    | ❌      | ✅       |
-| **Sum**           | 9 | 8  | 7  | 8  | 8   | 6   | 10  | 7    | 11   | 7      | 8       |
+|                                                      | C | C++ | Zig | Rust | Go | Haskell | Java | LuaJIT | JS | TS | Python | PHP |
+| ---------------------------------------------------- | - | --- | --- | ---- | -- | ------- | ---- | ------ | -- | -- | ------ | --- |
+| [LSP](Legend.md#LSP)                                 | ✅ | ✅   | ✅   | ✅    | ✅  | ✅       | ✅    | ✅      | ✅  | ✅  | ✅      | ❌   |
+| [No GC](Legend.md#No%20GC)                           | ✅ | ✅   | ✅   | ✅    | ❌  | ❌       | ❌    | ❌      | ❌  | ❌  | ❌      | ❌   |
+| [UB-safe](Legend.md#UB-safe)                         | ❌ | ❌   | ❌   | ✅    | ✅  | ✅       | ✅    | ✅      | ✅  | ✅  | ✅      | ✅   |
+| [Memory safe](Legend.md#Memory%20safe)               | ❌ | ❌   | ❌   | ❌    | ❌  | ✅       | ✅    | ✅      | ✅  | ✅  | ✅      | ✅   |
+| [Crossplatform](Legend.md#Crossplatform)             | ❌ | ❌   | ✅   | ✅    | ✅  | ❌       | ✅    | ❌      | ✅  | ✅  | ✅      | ✅   |
+| [Static types](Legend.md#Static%20types)             | ✅ | ✅   | ✅   | ✅    | ✅  | ✅       | ✅    | ❌      | ❌  | ✅  | ❌      | ❌   |
+| [Borrow checker](Legend.md#Borrow%20checker)         | ❌ | ❌   | ❌   | ✅    | ❌  | ❌       | ❌    | ❌      | ❌  | ❌  | ❌      | ❌   |
+| [Rich ecosystem](Legend.md#Rich%20ecosystem)         | ✅ | ✅   | ❌   | ✅    | ✅  | ✅       | ✅    | ❌      | ✅  | ✅  | ✅      | ✅   |
+| [Small binaries](Legend.md#Small%20binaries)         | ✅ | ✅   | ✅   | ✅    | ✅  | ❌       | ❌    | ✅      | ❌  | ❌  | ❌      | ❌   |
+| [Reasonably fast](Legend.md#Reasonably%20fast)       | ✅ | ✅   | ✅   | ✅    | ✅  | ✅       | ✅    | ✅      | ❌  | ❌  | ❌      | ❌   |
+| [Fast compilation](Legend.md#Fast%20compilation)     | ✅ | ❌   | ✅   | ❌    | ✅  | ❌       | ❌    | ✅      | ✅  | ❌  | ✅      | ✅   |
+| [Type level code](Legend.md#Type%20level%20code)     | ❌ | ✅   | ✅   | ✅    | ❌  | ✅       | ❌    | ❌      | ❌  | ✅  | ❌      | ❌   |
+| [<250M dev install](Legend.md#<250M%20dev%20install) | ✅ | ❌   | ✅   | ❌    | ✅  | ❌       | ❌    | ✅      | ✅  | ✅  | ✅      | ✅   |
+| [Full type erasure](Legend.md#Full%20type%20erasure) | ✅ | ✅   | ✅   | ✅    | ❌  | ✅       | ❌    | ❌      | ❌  | ❌  | ❌      | ❌   |
+| **Sum**                                              | 9 | 8   | 10  | 11   | 9  | 8       | 7    | 7      | 7  | 8  | 7      | 6   |
